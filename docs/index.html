@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>紫微主星人格测试</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <!-- 首页 -->
+  <section id="page-home" class="page active">
+    <div class="home-bg">
+      <div class="stars-container"></div>
+      <div class="home-content">
+        <div class="logo-icon">✦</div>
+        <h1>测一测你的<br><span class="highlight">紫微主星人格</span></h1>
+        <p class="subtitle">比MBTI更懂中国人</p>
+        <p class="desc">20道题，3分钟<br>找到属于你的那颗命定之星</p>
+        <button class="btn-start" onclick="startQuiz()">开始测试 →</button>
+        <p class="footer-text">以明玄览 · 紫微斗数</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 答题页 -->
+  <section id="page-quiz" class="page">
+    <div class="quiz-header">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text"><span id="currentQ">1</span> / 20</div>
+    </div>
+    <div class="quiz-body">
+      <div class="question-dimension" id="qDimension"></div>
+      <h2 class="question-text" id="qText"></h2>
+      <div class="options" id="optionsContainer"></div>
+      <div class="quiz-nav" id="quizNav">
+        <button class="nav-btn" id="btnPrev" onclick="goPrev()">← 上一题</button>
+        <button class="nav-btn nav-btn-next" id="btnNext" onclick="goNext()" style="display:none;">下一题 →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 结果页 -->
+  <section id="page-result" class="page">
+    <div class="result-container" id="resultContainer"></div>
+  </section>
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
